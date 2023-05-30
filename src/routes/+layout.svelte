@@ -3,10 +3,9 @@
       <a href="/" class="nav-logo" title="Back to Homepage">Имя 
         Фамилия</a>
          <div class="nav-links">
-             <a href="/about" class="link">Обо мнe</a>
-             <a href="/blog" class="link">Блог</a>
-             <a href="/projects" class="link">Портфолио</a>
-             <a href="/contact" class="link">Koнтaкты</a>
+             {#each nav as link}
+                <a href = {link.href} class="link">{link.title}</a>
+             {/each}
          </div>
     </div>
 </nav>
@@ -15,6 +14,34 @@
     <!-- Pages will be injected below --> 
     <slot></slot>
 </div>
+
+<script>
+  import { each,  } from "svelte/internal";
+
+    const nav = [
+        {
+            title : "About me",
+            href : "/about"
+        },
+        {
+            title : "Blog",
+            href : "/blog"
+        },
+        {
+            title : "Portfolio",
+            href : "/project"
+        },
+        {
+            title : "Contacts",
+            href : "/contact"
+        },
+        {
+            title : "Temp",
+            href : "/temp"
+        }
+    ]
+</script>
+
 
 <style>
     .container {
