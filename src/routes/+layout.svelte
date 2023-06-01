@@ -7,7 +7,6 @@
                {#if link.isShow}
                   <a href = {link.href} class="link">{link.title}</a>
                {/if}
-                
              {/each}
          </div>
     </div>
