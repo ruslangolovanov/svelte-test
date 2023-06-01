@@ -61,7 +61,7 @@
        
         <input bind:value={newItem} placeholder="Введите название">
        <input bind:value={newAmount} placeholder="Введите сумму">
-       <button class="add-Item" on:click={add}><span>Добавить</span></button>
+       <button class="add-Item" on:click={add} on:click={() => calcSum ()}><span>Добавить</span></button>
     </form>
     
 
@@ -81,8 +81,8 @@
                 <td><button class="delete" on:click={() => deleteExpense (i)}  on:click={() => calcSum ()}>Удалить</button></td>
             </tr>
             {/each}
-            <tr>
-                <td><button on:click={() => calcSum ()}>Общая сумма</button></td>
+            <tr class="totalAmount">
+                <td><div >Общая сумма</div></td>
                 
                 <td><div>{sum}</div></td>
             </tr> 
@@ -142,7 +142,7 @@
 }
 
 button { 
-    background-color: green;
+    background-color: rgba(25, 167, 25, 0.518);;
     width: 92px;
     padding: 4px;
     margin: 0;
@@ -153,9 +153,12 @@ button {
 }
 
 .delete{
-    background-color: brown;
+    background-color: rgba(165, 42, 42, 0.482);
 }
 
+.totalAmount{
+    background-color: rgba(25, 167, 25, 0.518);
+}
 
 
 </style>
