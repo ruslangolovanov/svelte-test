@@ -43,10 +43,13 @@
             <span class="todo_text">{item.Task}</span>
             <div class="todo_buttons">
                 <button class="complete" on:click={() => complete(index)}>
-                    <Icon name = "check-mark"></Icon>
+                    <div>&#9989;</div>
+                    <!-- <Icon name = "check-mark">&#10003</Icon> -->
                 </button>
                 <button class="delete" on:click={() => remove(index)}>
-                    <Icon name = "delete"></Icon>
+                    
+                    <div>&#10060;</div>
+                    <!-- <Icon name = "delete">-</Icon> -->
                 </button>
             </div> 
         </div>
@@ -98,7 +101,7 @@
         padding: 20px;
         border-radius: 20px;
         box-shadow: 0 0 15px rgb(0, 0, 0 / 20%);
-        background-color: hsla(0, 0%, 100%, 0.2);
+        background-color: hsla(0, 0%, 100%, 0.678);
         margin-top: 1 rem;
         font-size: 1.2rem;
         justify-content: space-between;
@@ -109,6 +112,7 @@
         display: flex;
         align-items: center;
         margin-left: 1rem;
+        
 
     }
 
